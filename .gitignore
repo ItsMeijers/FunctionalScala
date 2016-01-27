@@ -1,1 +1,15 @@
-/target
+*.class
+*.log
+
+# sbt specific
+.cache/
+.history/
+.lib/
+.ensime
+.ensime_cache/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
