@@ -8,7 +8,7 @@ object Id {
   val idMonad = new Monad[Id] {
     def unit[A](a: => A): Id[A] = Id(a)
 
-    def flatMap[A, B](ida: Id[A])(f: A => Id[B]): Id[B] =
+    override def flatMap[A, B](ida: Id[A])(f: A => Id[B]): Id[B] =
       ida flatMap f
   }
 }
